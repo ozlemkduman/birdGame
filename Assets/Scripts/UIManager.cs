@@ -120,6 +120,7 @@ public class UIManager : MonoBehaviour
 
     private void StartGame()
     {
+        GameManager.Instance.PlayBackGroundAudio();
         isGameOver = false;
         GameOverPanel.style.display = DisplayStyle.None;
         MainMenuPanel.style.display = DisplayStyle.None;
@@ -129,6 +130,7 @@ public class UIManager : MonoBehaviour
 
     private void ExitGame()
     {
+        GameManager.Instance.PlayBackGroundAudio();
         isGameOver = true;
         ScoreReset();
         Debug.Log("Oyun kapatılıyor...");
@@ -137,6 +139,7 @@ public class UIManager : MonoBehaviour
 
     private void ShowMainMenu()
     {
+        GameManager.Instance.PlayMainMenuAudio();
         MainMenuPanel.style.display = DisplayStyle.Flex;
         GameOverPanel.style.display = DisplayStyle.None;
     }

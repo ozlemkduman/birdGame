@@ -27,6 +27,7 @@ public class BirdScripts : MonoBehaviour
             if (GameManager.Instance != null)
             {
                 Debug.Log(hitObject.name);
+                GameManager.Instance.GameOverAudio();
                 StartCoroutine(DelayedGameOver());  // 1 saniye bekleyen coroutine başlatılıyor
             }
             else
