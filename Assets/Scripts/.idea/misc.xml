@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectResources">
+    <resource url="https://unity.com/schemas/ui" location="$APPLICATION_HOME_DIR$/plugins/rider-unity/lib/rider-plugins-unity.jar!/schemas/fileLayout/unityFileLayout.xsd" />
+  </component>
+</project>

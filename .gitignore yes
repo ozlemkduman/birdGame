@@ -1,0 +1,13 @@
+# Unity Gereksiz Dosyalar
+Library/
+Temp/
+Logs/
+MemoryCaptures/
+Build/
+Build/Libraries/
+obj/
+.DS_Store
+
+
+
+

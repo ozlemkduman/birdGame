@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/2D Bird Game Mobile/Scenes/Menu.unity
+    guid: 5ee6491ff6503e345b2fda4308404d13
+  - enabled: 0
+    path: Assets/2D Bird Game Mobile/Scenes/Game.unity
+    guid: ef9bd5f650229d147ac57a1ef7f2a3c1
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: e6f1545a0d3e8453c95c088ec7cff0b4
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7aae6eba880414fcfa23bcfd35c9be5e, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: deca84381deb34713940a245aaa09aac, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: f0fe0e32f732b41308cb814b8d050e6f, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 01e2b7bdaba7d4cfbb7cffc6145f03e5, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 51370b61cbdf24226aec67e73691eb55, type: 2}
+  m_UseUCBPForAssetBundles: 0

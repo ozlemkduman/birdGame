@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: ad05c5dee3f3c7a44acf8e55eb655426
+timeCreated: 1466200208
+licenseType: Store
+AudioImporter:
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 65334
+  packageName: Infinite Happiness (free)
+  packageVersion: 1.0
+  assetPath: Assets/infinite_happiness_free/non_loopable/happy_light.ogg
+  uploadId: 123121

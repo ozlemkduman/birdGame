@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 13a09b82556ccc64ebf4949359b5e52b
+timeCreated: 1466200351
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 65334
+  packageName: Infinite Happiness (free)
+  packageVersion: 1.0
+  assetPath: Assets/infinite_happiness_free/README.txt
+  uploadId: 123121
