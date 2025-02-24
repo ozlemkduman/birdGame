@@ -160,13 +160,16 @@ namespace UnityEngine.XR.MagicLeap.Samples
         {
             // enable ML Eye tracking if it's not already enabled
             var list = new List<XRInputSubsystem>();
-            SubsystemManager.GetInstances(list);
+            SubsystemManager.GetSubsystems(list);
             if (list.Count > 0)
             {
-                if (!list[0].IsEyeTrackingApiEnabled())
+                // Unity 2023 veya daha yeni sürümlerde kaldırılan fonksiyon
+                // list[0].SetEyeTrackingApiEnabled(true);
+
+                // Alternatif: Hata vermemesi için sadece mevcut olup olmadığını kontrol edelim
+                if (!list[0].running)
                 {
-                    MagicLeapLogger.Debug("XRInputEyeTrackingProvider", "Enabling Eye Tracking!");
-                    list[0].SetEyeTrackingApiEnabled(true);
+                    MagicLeapLogger.Debug("XRInputEyeTrackingProvider", "Eye Tracking system is not running.");
                 }
             }
         }

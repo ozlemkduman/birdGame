@@ -1200,7 +1200,6 @@ GameObject:
   - component: {fileID: 1850337248}
   - component: {fileID: 1850337247}
   - component: {fileID: 1850337246}
-  - component: {fileID: 1850337245}
   - component: {fileID: 1850337252}
   - component: {fileID: 1850337251}
   - component: {fileID: 1850337250}
@@ -1211,23 +1210,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!111 &1850337245
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850337244}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: be0cb65c3e749944590e9721b56053b5, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: be0cb65c3e749944590e9721b56053b5, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!95 &1850337246
 Animator:
   serializedVersion: 7
@@ -1361,7 +1343,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: -7.35, y: 0.82, z: -0.02289535}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.29, y: 0.29, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1379,6 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 6
+  HealthBird: 100
 --- !u!50 &1850337251
 Rigidbody2D:
   serializedVersion: 5

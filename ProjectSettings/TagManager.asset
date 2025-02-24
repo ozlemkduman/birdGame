@@ -8,6 +8,7 @@ TagManager:
   - StarClam
   - Barrier
   - Ground
+  - Lightning
   layers:
   - Default
   - TransparentFX

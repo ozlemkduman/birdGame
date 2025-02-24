@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager instance;
-    
+
     [SerializeField] private GameObject barrierPrefab;
     private int poolSize = 10; // Havuzda kaç engel olacak
 
@@ -21,7 +21,7 @@ public class SpawnManager : MonoBehaviour
 
     // Engel hızı yönetimi
     public float globalSpeed = 3f; // Başlangıç hızı
-    public float speedIncreaseRate = 0.03f; // Hız artış miktarı
+    public float speedIncreaseRate = 0.06f; // Hız artış miktarı
     private int lastCheckedScore = -1; // Hangi puanda hız arttı
 
     void Start()
@@ -53,7 +53,7 @@ public class SpawnManager : MonoBehaviour
         }
 
         int currentScore = int.Parse(UIManager.Instance.Score.text);
-        
+
         // Skor 250'nin katlarına ulaştığında hız artır
         if (currentScore % 250 == 0 && currentScore != lastCheckedScore)
         {
@@ -69,7 +69,7 @@ public class SpawnManager : MonoBehaviour
         float posY;
         float posX;
         int attempts = 0;
-        
+
         do
         {
             posY = Random.Range(-5f, 4f);
@@ -77,24 +77,27 @@ public class SpawnManager : MonoBehaviour
 
             attempts++;
             if (attempts > 10) break; // Sonsuz döngüyü önlemek için
-        } while ((Mathf.Abs(posY - lastSpawnPosition.y) < minYDistance) || 
+        } while ((Mathf.Abs(posY - lastSpawnPosition.y) < minYDistance) ||
                  (Mathf.Abs(posX - lastSpawnPosition.x) < minXDistance));
 
-        GameObject newPipe = GetPooledBarrier();
-        if (newPipe)
+        GameObject newBarrier = GetPooledBarrier();
+        if (newBarrier)
         {
-            newPipe.transform.position = new Vector3(posX, posY, 0f);
-            newPipe.SetActive(true);
+            newBarrier.transform.position = new Vector3(posX, posY, 0f);
+            newBarrier.SetActive(true);
 
-            // 🔥 Animasyonu başlat
-            Animator anim = newPipe.GetComponent<Animator>();
-            if (anim != null)
+            // 🎯 Animasyonu başlat
+            Animator barrierAnim = newBarrier.GetComponent<Animator>();
+            if (barrierAnim != null)
             {
-                anim.Play("EnemyIdle");  // 🎬 Animasyon adını kontrol et
+                barrierAnim.Play("Enemies"); // "Enemies" olan animasyon adı olmalı
+            }
+            else
+            {
+                Debug.LogError("BarrierObject Animator bileşeni eksik!");
             }
             lastSpawnPosition = new Vector2(posX, posY); // Yeni konumu güncelle
         }
-
     }
 
     GameObject GetPooledBarrier()
